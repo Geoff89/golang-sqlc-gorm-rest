@@ -1,0 +1,43 @@
+@host = localhost:8000
+
+// Create contact
+POST http://{{host}}/api/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "first_name": "Bruce",
+    "last_name": "Sainio",
+    "phone_number": "424267776767",
+    "street": "River road east side"
+}
+
+###
+
+// Get All Contacts
+GET http://{{host}}/api/contacts?page=1&limit=10 HTTP/1.1
+Content-Type: application/json
+
+###
+
+// Get Single Contact Record
+GET http://{{host}}/api/contacts/a2e0e15f-0f4e-4a58-925c-c8d198c3b0cd HTTP/1.1
+Content-Type: application/json
+
+###
+
+// Update contact
+PATCH  http://{{host}}/api/contacts/a2e0e15f-0f4e-4a58-925c-c8d198c3b0cd HTTP/1.1
+Content-Type: application/json
+
+{
+    "first_name": "Tomilee",
+    "last_name": "Hansan",
+    "phone_number": "1455555555555"
+}
+
+###
+
+// Delete  Contact Record
+DELETE  http://{{host}}/api/contacts/a2e0e15f-0f4e-4a58-925c-c8d198c3b0cd HTTP/1.1
+Content-Type: application/json
+
