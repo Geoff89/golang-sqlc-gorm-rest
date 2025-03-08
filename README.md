@@ -1,1 +1,1 @@
-# golang-sqlc-gorm-rest
+#### golang backend using sqlc,gorm and postgres database.
